@@ -126,7 +126,7 @@ const menuGroups = [
 
         ),
         label: "Enterprises",
-        route: "/enterprises",
+        route: "/srm/enterprises",
         children: [
           { label: "Form Elements", route: "/forms/form-elements" },
           { label: "Form Layout", route: "/forms/form-layout" },
@@ -139,7 +139,7 @@ const menuGroups = [
 
         ),
         label: "Help",
-        route: "/help",
+        route: "/srm/help",
         children: [
           { label: "Tables", route: "/tables" },
         ],

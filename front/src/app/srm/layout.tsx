@@ -21,8 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      <div className={"flex"}>
+
         <Sidebar sidebarOpen = {sidebarOpen} setSidebarOpen={setSidebarOpen}/>
         {children}
+      </div>
+
       </body>
     </html>
   );
