@@ -8,6 +8,7 @@ import SidebarItem from "./components/SidebarItem";
 import { PiBuildingApartmentLight } from "react-icons/pi";
 import { PiInfoLight } from "react-icons/pi";
 import { SiRobotframework } from "react-icons/si";
+import { PiCalendarDotsLight } from "react-icons/pi";
 
 // import ClickOutside from "@/components/ClickOutside";
 // import useLocalStorage from "@/hooks/useLocalStorage";
@@ -98,6 +99,25 @@ const menuGroups = [
         ),
         label: "Enterprises",
         route: "/srm/enterprises",
+      },
+      {
+        icon: (
+
+            <PiInfoLight className={"fill-current"} size={24}/>
+
+        ),
+        label: "Help",
+        route: "/srm/help",
+      },
+
+      // GRANN DIAGRAM
+      {
+        icon: (
+            <PiCalendarDotsLight  className={"fill-current"} size={24}/>
+
+        ),
+        label: "Grann tasks",
+        route: "/srm/grann",
       },
       {
         icon: (
