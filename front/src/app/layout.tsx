@@ -1,4 +1,3 @@
-'use client'
 import type { Metadata } from "next";
 import React,{ useState } from "react";
 // import { Geist, Geist_Mono } from "next/font/google";
@@ -15,15 +14,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const [sidebarOpen,setSidebarOpen] = useState<boolean>(true) 
   return (
     <html lang="en">
       <body>
         <div className="bg-[#F5F5F5]">
           {children}
         </div>
-        {/* <Sidebar sidebarOpen = {sidebarOpen} setSidebarOpen={setSidebarOpen}/> */}
       </body>
     </html>
   );

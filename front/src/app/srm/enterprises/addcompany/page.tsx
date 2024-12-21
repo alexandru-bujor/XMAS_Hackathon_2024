@@ -7,7 +7,7 @@ import Link from 'next/link'; // Import Link
 
 interface EnterpriseParams{
   params:{ 
-		enterprise:string;
+    enterprise:string;
   };
 }
 
