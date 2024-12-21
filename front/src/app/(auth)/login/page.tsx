@@ -23,10 +23,10 @@ export default function Login() {
               Email Address
             </label>
             <input
-              type="email"
-              id="email"
-              className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
+                type="email"
+                id="email"
+                className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your email"
             />
           </div>
           <div>
@@ -34,15 +34,15 @@ export default function Login() {
               Password
             </label>
             <input
-              type="password"
-              id="password"
-              className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your password"
+                type="password"
+                id="password"
+                className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your password"
             />
           </div>
           <button
-            type="submit"
-            className="bg-black text-gray-200 hover:bg-[#00B99A] font-semibold rounded-full w-full py-3 transition-all duration-300"
+              type="submit"
+              className="bg-black text-gray-200 hover:bg-[#00B99A] font-semibold rounded-full w-full py-3 transition-all duration-300"
           >
             Log In
           </button>
@@ -54,7 +54,11 @@ export default function Login() {
               Register
             </Link>
           </p>
+
         </div>
+
+        <img className={"p-2 py-6"} src={"https://www.asp.gov.md/sites/default/files/dd/logo-mpower.svg"}/>
+
       </div>
     </div>
   );
