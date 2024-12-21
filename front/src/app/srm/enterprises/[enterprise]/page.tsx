@@ -5,7 +5,13 @@ import { useEffect, useState } from "react";
 import { FaBuilding } from 'react-icons/fa';
 import Link from 'next/link'; // Import Link
 
-export default function Page({params}) {
+interface EnterpriseParams{
+  params:{ 
+		enterprise:string;
+  };
+}
+
+export default function Enterprise({params}:EnterpriseParams) {
     const {enterprise} = params;
     const [enterpriseList, setEnterpriseList] = useState<any>([]);
 
@@ -39,7 +45,7 @@ export default function Page({params}) {
     ];
 
     // Function to get next gradient in sequence
-    const getGradient = (index) => {
+    const getGradient = (index:number) => {
         return gradients[index % gradients.length];
     };
 

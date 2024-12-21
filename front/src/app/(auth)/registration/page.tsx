@@ -6,7 +6,8 @@ export default function Registration() {
   
   const router = useRouter();
 		//post request fetch()
-	const handleSubmit = () => {
+	const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 		router.push("/srm")
 	}	
   return (
