@@ -19,9 +19,11 @@ export default function RootLayout({
   const [sidebarOpen,setSidebarOpen] = useState<boolean>(true) 
   return (
     <html lang="en">
-      <body className="bg-[#F5F5F5]">
+      <body>
+        <div className="bg-[#F5F5F5]">
+          {children}
+        </div>
         {/* <Sidebar sidebarOpen = {sidebarOpen} setSidebarOpen={setSidebarOpen}/> */}
-        {children}
       </body>
     </html>
   );
