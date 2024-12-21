@@ -17,7 +17,7 @@ const ButtonDefault = ({
   return (
     <>
       <Link
-        className={`inline-flex items-center justify-center gap-2.5 text-center font-medium hover:bg-[#00B99A] transition-colors ${customClasses}`}
+        className={`inline-flex items-center justify-center gap-2.5 text-center font-medium hover:bg-[#00B99A] transition-all duration-300 ${customClasses}`}
         href={link}
       >
         {children}
