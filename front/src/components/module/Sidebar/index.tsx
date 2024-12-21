@@ -7,6 +7,7 @@ import Image from "next/image";
 import SidebarItem from "./components/SidebarItem";
 import { PiBuildingApartmentLight } from "react-icons/pi";
 import { PiInfoLight } from "react-icons/pi";
+import { SiRobotframework } from "react-icons/si";
 
 // import ClickOutside from "@/components/ClickOutside";
 // import useLocalStorage from "@/hooks/useLocalStorage";
@@ -127,26 +128,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       >
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
-          <Link href="/">
-            <Image
-              width={176}
-              height={32}
-              src={"/logo.svg"}
-              alt="Logo"
-              priority
-              className=""
-              style={{ width: "auto", height: "auto" }}
-            />
-            <Image
-              width={176}
-              height={32}
-              src={"logo.svg"}
-              alt="Logo"
-              priority
-              className="hidden dark:block"
-              style={{ width: "auto", height: "auto" }}
-            />
-          </Link>
+          <div className={"items-center"}>
+            <Link href="/">
+              <SiRobotframework className={""} size={40}/>
+            </Link>
+          </div>
+
 
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
