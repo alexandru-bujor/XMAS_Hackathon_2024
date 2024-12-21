@@ -1,14 +1,12 @@
-import axios from "axios";
+import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from "axios";
 
-const api = axios.create({
+const api: AxiosInstance = axios.create({
     baseURL: "http://localhost:8080",
-    headers: {
-        "Content-Type": "application/json",
-    },
 });
 
+// Request interceptor
 api.interceptors.request.use(
-    (config) => {
+    (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig | Promise<InternalAxiosRequestConfig> => {
         return config;
     },
     (error) => {
@@ -16,8 +14,11 @@ api.interceptors.request.use(
     }
 );
 
+// Response interceptor
 api.interceptors.response.use(
-    (response) => response,
+    (response: AxiosResponse): AxiosResponse | Promise<AxiosResponse> => {
+        return response;
+    },
     (error) => {
         // Handle response errors
         return Promise.reject(error);

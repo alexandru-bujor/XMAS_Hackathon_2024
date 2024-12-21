@@ -135,8 +135,8 @@ const menuGroups = [
             />
           </svg>
         ),
-        label: "Forms",
-        route: "#",
+        label: "Enterprises",
+        route: "/enterprises",
         children: [
           { label: "Form Elements", route: "/forms/form-elements" },
           { label: "Form Layout", route: "/forms/form-layout" },
