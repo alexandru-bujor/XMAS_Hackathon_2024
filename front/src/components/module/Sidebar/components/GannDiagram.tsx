@@ -190,12 +190,12 @@ const GanttChart: React.FC<GanttProps> = ({ initialTasks = defaultTasks }) => {
                                 </div>
                                 <div className="flex-grow relative h-12">
                                     <div
-                                        className="absolute top-2 h-8 rounded-lg bg-blue-500 hover:bg-blue-600
+                                        className="absolute top-2 h-8 rounded-lg bg-gradient-to-r from-red-100 to-orange-50 hover:bg-zinc-300
                                         transition-colors duration-150 cursor-pointer"
                                         style={getTaskStyle(task)}
                                     >
                                         <div
-                                            className="h-full rounded-lg bg-blue-700"
+                                            className="h-full rounded-lg bg-gradient-to-r from-red-400 to-orange-200"
                                             style={{ width: `${task.progress}%` }}
                                         />
 
@@ -265,15 +265,19 @@ const GanttChart: React.FC<GanttProps> = ({ initialTasks = defaultTasks }) => {
                             <div>
                                 <label className="block text-sm font-medium mb-1">Progress (%)</label>
                                 <input
-                                    type="number"
-                                    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    type="range"
+                                    className="w-full"
                                     min="0"
                                     max="100"
                                     value={formData.progress || 0}
-                                    onChange={(e) => setFormData({ ...formData, progress: Number(e.target.value) })}
+                                    onChange={(e) => setFormData({...formData, progress: Number(e.target.value)})}
                                     required
                                 />
+                                <span className="block text-sm mt-1 text-gray-600">
+                                      {formData.progress || 0}%
+                         </span>
                             </div>
+
                             <div className="flex justify-end gap-2 mt-6">
                                 <button
                                     type="button"
@@ -312,7 +316,6 @@ const defaultTasks: Task[] = [
         startDate: new Date('2024-12-22'),
         endDate: new Date('2024-12-28'),
         progress: 40,
-        dependencies: [1],
     },
     {
         id: 3,
@@ -320,7 +323,6 @@ const defaultTasks: Task[] = [
         startDate: new Date('2024-12-24'),
         endDate: new Date('2024-12-28'),
         progress: 20,
-        dependencies: [2],
     }
 ];
 
