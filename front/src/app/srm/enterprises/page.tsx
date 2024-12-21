@@ -4,9 +4,11 @@ import api from "@/lib/axiosApi";
 import { useEffect, useState } from "react";
 import { FaBuilding, FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
+import Form from 'next/'
 
 export default function Page() {
     const [enterpriseList, setEnterpriseList] = useState<any>([]);
+    const [formOn,setFormOn] = useState<boolean>(false);
 
     const dummyDataList: any = [{
         "name": "SRL Tucano Coffee",
@@ -19,18 +21,18 @@ export default function Page() {
         "Date": "31.03.2010",
         "Adress": "Stafan cel Mare 222"
     },
-        {
-            "name": "SRL Sigmoid",
-            "idno": "12301123012",
-            "Date": "31.03.2010",
-            "Adress": "Stafan cel Mare 222"
-        },
-        {
-            "name": "ООО Пивасик",
-            "idno": "123121230",
-            "Date": "12.01.1910",
-            "Adress": "Strada Uzinelor 21A"
-        }];
+    {
+        "name": "SRL Sigmoid",
+        "idno": "12301123012",
+        "Date": "31.03.2010",
+        "Adress": "Stafan cel Mare 222"
+    },
+    {
+        "name": "ООО Пивасик",
+        "idno": "123121230",
+        "Date": "12.01.1910",
+        "Adress": "Strada Uzinelor 21A"
+    }];
 
     const enterprises = enterpriseList.length > 0 ? enterpriseList : dummyDataList;
 
@@ -82,16 +84,21 @@ export default function Page() {
                 </Link>
             ))}
 
-            <Link href="/add-company" passHref>
-                <div className="rounded-lg border h-44 border-zinc-100 bg-gradient-to-r from-gray-100 to-gray-50 p-6 shadow-md hover:shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 flex flex-col justify-center items-center cursor-pointer">
-                    <div className="flex flex-col items-center space-y-4">
-                        <FaPlus className="text-4xl text-gray-400 transition-transform duration-300 transform hover:scale-110" />
-                        <h3 className="text-xl font-semibold text-gray-600 hover:text-gray-800 transition-colors duration-300 ease-in-out">
-                            Add New Company
-                        </h3>
-                    </div>
+            <div className="rounded-lg border h-44 border-zinc-100 bg-gradient-to-r from-gray-100 to-gray-50 p-6 shadow-md hover:shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 flex flex-col justify-center items-center cursor-pointer">
+                <div className="flex flex-col items-center space-y-4">
+                    <FaPlus className="text-4xl text-gray-400 transition-transform duration-300 transform hover:scale-110" />
+                    <h3 className="text-xl font-semibold text-gray-600 hover:text-gray-800 transition-colors duration-300 ease-in-out">
+                        Add New Company
+                    </h3>
                 </div>
-            </Link>
+            </div>
+
+            {formOn &&
+							<Form action="">
+
+
+							</form>
+            }
         </div>
     );
 }
