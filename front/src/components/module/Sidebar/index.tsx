@@ -43,7 +43,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Dashboard",
-        route: "#",
+        route: "/srm",
       },
       {
         icon: (
@@ -174,7 +174,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           <nav className="mt-1 px-4 lg:px-6">
             {menuGroups.map((group, groupIndex) => (
               <div key={groupIndex}>
-                <h3 className="mb-5 text-sm font-medium text-dark-4 dark:text-dark-6">
+                <h3 className="ml-2 mb-5 text-lg font-semibold">
                   {group.name}
                 </h3>
 
