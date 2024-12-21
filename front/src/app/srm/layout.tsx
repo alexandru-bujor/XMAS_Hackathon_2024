@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import React,{ useState } from "react";
 // import { Geist, Geist_Mono } from "next/font/google";
 import Sidebar from "@/components/module/Sidebar";
-import "../globals.css"
+// import "../globals.css"
 // "@/components/module/Sidebar"
 
 // export const metadata: Metadata = {
