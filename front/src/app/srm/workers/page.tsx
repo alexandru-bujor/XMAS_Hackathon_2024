@@ -130,7 +130,7 @@ const TableThree = () => {
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pr-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <div className="flex items-center justify-end space-x-3.5">
-                    <button className="hover:text-primary">
+                    <button className="hover:text-[#00B99A]">
                       <svg
                         className="fill-current"
                         width="20"
@@ -153,7 +153,7 @@ const TableThree = () => {
                         />
                       </svg>
                     </button>
-                    <button className="hover:text-primary">
+                    <button className="hover:text-[#00B99A]">
                       <svg
                         className="fill-current"
                         width="20"
@@ -182,7 +182,7 @@ const TableThree = () => {
                         />
                       </svg>
                     </button>
-                    <button className="hover:text-primary">
+                    <button className="hover:text-[#00B99A]">
                       <svg
                         className="fill-current"
                         width="20"
