@@ -11,6 +11,6 @@
 		public string Studies { get; set; } = string.Empty;
 		public double IDNP { get; set; }
 
-
+		//DE ADAUGAT ROL AICI OWNER SAU EMPLOYEE
 	}
 }
