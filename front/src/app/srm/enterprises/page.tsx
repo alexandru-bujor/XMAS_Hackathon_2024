@@ -4,11 +4,42 @@ import api from "@/lib/axiosApi";
 import { useEffect, useState, useRef } from "react";
 import { FaBuilding, FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
+import Header from "@/components/ui/Header";
+
+const companyDropDownTypes = [
+	{
+		name:"SRL",
+		index: 1,
+	},
+	{
+		name:"II",
+		index: 2,
+	},
+	{
+		name:"IF",
+		index: 3,
+	},
+	{
+		name:"SA",
+		index: 4,
+	},
+	{
+		name:"Rezidenti IT",
+		index: 5,
+	},
+	
+]
+
 
 export default function Page() {
     const [enterpriseList, setEnterpriseList] = useState<any>([]);
     const [formOn, setFormOn] = useState<boolean>(false);
     const formRef = useRef<HTMLDivElement>(null);
+		const [selectedCompanyType, setSelectedCompanyType] = useState<string>("");
+
+		const handleCompanyTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+			setSelectedCompanyType(e.target.value);
+	};
 
     const handleOnClick = () => {
         setFormOn(true);
@@ -67,6 +98,7 @@ export default function Page() {
     return (
 			<>
             <div className="flex flex-row flex-wrap gap-6 p-6">
+							{/* <Header label={"Project"} customClassname="-mx-6 px-5"/> */}
                 {enterprises.map((enterprise, index:number) => (
                     <Link
                         key={enterprise.idno}
@@ -129,32 +161,72 @@ export default function Page() {
                         >
                             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                                        Email Address
+                                    <label htmlFor="company" className="block text-sm font-medium mb-2">
+                                      Company name
                                     </label>
                                     <input
-                                        type="email"
-                                        id="email"
+                                        type="company"
+                                        id="company"
                                         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="Enter your email"
+                                        placeholder="Enter your company"
                                     />
                                 </div>
                                 <div>
                                     <label htmlFor="password" className="block text-sm font-medium mb-2">
-                                        Password
+                                        Company Type
+                                    </label>
+                                    <select
+                                        id="companyType"
+                                        value={selectedCompanyType}
+                                        onChange={handleCompanyTypeChange}
+                                        className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                                    >
+                                        <option value="">Select company type</option>
+                                        {companyDropDownTypes.map((type) => (
+                                            <option key={type.index} value={type.name}>
+                                                {type.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+																<div>
+                                    <label htmlFor="founder" className="block text-sm font-medium mb-2">
+                                        Founder's name
                                     </label>
                                     <input
-                                        type="password"
-                                        id="password"
+                                        type="founder"
+                                        id="founder"
                                         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="Enter your password"
+                                        placeholder="Enter your founder"
+                                    />
+                                </div>
+																<div>
+                                    <label htmlFor="dateof" className="block text-sm font-medium mb-2">
+                                        Date of Registration
+                                    </label>
+                                    <input
+                                        type="dateof"
+                                        id="dateof"
+                                        className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        placeholder="Enter your dateof"
+                                    />
+                                </div>
+																<div>
+                                    <label htmlFor="adress" className="block text-sm font-medium mb-2">
+                                        Adress
+                                    </label>
+                                    <input
+                                        type="adress"
+                                        id="adress"
+                                        className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        placeholder="Enter your adress"
                                     />
                                 </div>
                                 <button
                                     type="submit"
                                     className="bg-black text-gray-200 hover:bg-[#00B99A] font-semibold rounded-full w-full py-3 transition-all duration-300"
                                 >
-                                    Log In
+                                    Get PDF
                                 </button>
                             </form>
                         </div>
