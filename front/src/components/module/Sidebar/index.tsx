@@ -91,7 +91,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Calendar",
-        route: "/calendar",
+        route: "/srm/calendar",
       },
       {
         icon: (

@@ -1,4 +1,4 @@
-export default function Help() {
+export default function Calendar() {
   return (
       <div>
           Hello Calendar!

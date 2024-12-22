@@ -66,7 +66,7 @@ const TableThree = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const handleCalculate = () =>{
-
+    
   }
 
   useEffect(() => {
