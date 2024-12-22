@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Moldova Company Registration AI";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-action="AskQuestion">
+    <label for="userQuestion">Ask a question about registering an IT company in Moldova:</label>
+    <input type="text" id="userQuestion" name="userQuestion" class="form-control" placeholder="e.g., How to register an IT company?" required />
+    <button type="submit" class="btn btn-primary">Ask</button>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <h2>Response:</h2>
+    <p>@ViewBag.Response</p>
+}

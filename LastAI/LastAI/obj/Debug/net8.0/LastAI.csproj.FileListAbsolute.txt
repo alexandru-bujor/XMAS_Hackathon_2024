@@ -1,0 +1,8 @@
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.AssemblyInfoInputs.cache
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.AssemblyInfo.cs
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.csproj.CoreCompileInputs.cache
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.MvcApplicationPartsAssemblyInfo.cache
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.RazorAssemblyInfo.cache
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.RazorAssemblyInfo.cs
+C:\dev\XMAS_Hackathon_2024\LastAI\LastAI\obj\Debug\net8.0\LastAI.sourcelink.json

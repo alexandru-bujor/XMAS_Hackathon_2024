@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB7C3BF6-E56F-4DF1-9250-AA28349CFA46}|MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\mycompanyregistrationapp\\mycompanyregistrationapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{AB7C3BF6-E56F-4DF1-9250-AA28349CFA46}|MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj|solutionrelative:mycompanyregistrationapp\\mycompanyregistrationapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\lastai\\services\\companyregistrationbotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|solutionrelative:lastai\\services\\companyregistrationbotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\lastai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|solutionrelative:lastai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\lastai\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|solutionrelative:lastai\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB7C3BF6-E56F-4DF1-9250-AA28349CFA46}|MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\mycompanyregistrationapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AB7C3BF6-E56F-4DF1-9250-AA28349CFA46}|MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj|solutionrelative:mycompanyregistrationapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB7C3BF6-E56F-4DF1-9250-AA28349CFA46}|MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\mycompanyregistrationapp\\mycompanyregistrationapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AB7C3BF6-E56F-4DF1-9250-AA28349CFA46}|MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj|solutionrelative:mycompanyregistrationapp\\mycompanyregistrationapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|c:\\dev\\xmas_hackathon_2024\\lastai\\lastai\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3062631E-52C9-4169-8167-FA3A0FBB1921}|LastAI\\LastAI.csproj|solutionrelative:lastai\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyCompanyRegistrationApp",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "RelativeDocumentMoniker": "MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "RelativeToolTip": "MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-22T02:36:58.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyCompanyRegistrationApp",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "RelativeDocumentMoniker": "MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "RelativeToolTip": "MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-22T02:29:29.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\appsettings.json",
+              "RelativeDocumentMoniker": "MyCompanyRegistrationApp\\appsettings.json",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\appsettings.json",
+              "RelativeToolTip": "MyCompanyRegistrationApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-22T02:25:50.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LastAI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LastAI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-22T02:11:06.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "LastAI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "LastAI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T02:10:37.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Program.cs",
+              "RelativeDocumentMoniker": "LastAI\\Program.cs",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Program.cs",
+              "RelativeToolTip": "LastAI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T02:08:14.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompanyRegistrationBotService.cs",
+              "DocumentMoniker": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Services\\CompanyRegistrationBotService.cs",
+              "RelativeDocumentMoniker": "LastAI\\Services\\CompanyRegistrationBotService.cs",
+              "ToolTip": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\LastAI\\Services\\CompanyRegistrationBotService.cs",
+              "RelativeToolTip": "LastAI\\Services\\CompanyRegistrationBotService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T02:07:23.912Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

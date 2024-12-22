@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ARnVDkMnrvM=",
+  "success": true,
+  "projectFilePath": "C:\\dev\\XMAS_Hackathon_2024\\LastAI\\MyCompanyRegistrationApp\\MyCompanyRegistrationApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sandu\\.nuget\\packages\\ollama\\1.0.0\\ollama.1.0.0.nupkg.sha512",
+    "C:\\Users\\sandu\\.nuget\\packages\\ollama.models\\1.0.0\\ollama.models.1.0.0.nupkg.sha512",
+    "C:\\Users\\sandu\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\sandu\\.nuget\\packages\\system.text.json\\8.0.3\\system.text.json.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
