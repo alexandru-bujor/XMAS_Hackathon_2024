@@ -37,7 +37,7 @@ namespace HireMeF.UseCases.UserCommands
 
 		public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
 		{
-			var userToAdd = new User
+			var userToAdd = new Data.Entities.User
 			{
 				Id = Guid.NewGuid(),
 				FirstName = request.FirstName,

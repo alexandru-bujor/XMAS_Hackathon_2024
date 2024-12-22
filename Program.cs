@@ -1,7 +1,9 @@
 using HireMeF.Data;
+using HireMeF.UseCases.UserCommands;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Configuration;
+using System.Reflection;
 
 
 
@@ -15,6 +17,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<CreateUserCommand>());
 
 var app = builder.Build();
 

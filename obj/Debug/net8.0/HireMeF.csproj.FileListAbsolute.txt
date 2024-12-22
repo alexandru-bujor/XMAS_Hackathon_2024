@@ -212,3 +212,7 @@ D:\HireMeF\HireMeF\obj\Debug\net8.0\refint\HireMeF.dll
 D:\HireMeF\HireMeF\obj\Debug\net8.0\HireMeF.pdb
 D:\HireMeF\HireMeF\obj\Debug\net8.0\HireMeF.genruntimeconfig.cache
 D:\HireMeF\HireMeF\obj\Debug\net8.0\ref\HireMeF.dll
+D:\HireMeF\HireMeF\obj\Debug\net8.0\HireMeF.sourcelink.json
+D:\HireMeF\HireMeF\bin\Debug\net8.0\FluentValidation.dll
+D:\HireMeF\HireMeF\bin\Debug\net8.0\MediatR.dll
+D:\HireMeF\HireMeF\bin\Debug\net8.0\MediatR.Contracts.dll

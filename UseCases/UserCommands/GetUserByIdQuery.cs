@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HireMeF.UseCases.UserCommands
 {
-	public class GetUserByIdQuery : IRequest<User>
+	public class GetUserByIdQuery : IRequest<Data.Entities.User>
 	{
 		public GetUserByIdQuery(Guid id)
 		{
@@ -15,7 +15,7 @@ namespace HireMeF.UseCases.UserCommands
 		public Guid Id { get; set; }
 	}
 
-	public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, User>
+	public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, Data.Entities.User>
 	{
 		private readonly ApplicationDbContext _appDbContext;
 
@@ -24,7 +24,7 @@ namespace HireMeF.UseCases.UserCommands
 			_appDbContext = appDbContext;
 		}
 
-		public async Task<User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
+		public async Task<Data.Entities.User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
 		{
 			return await _appDbContext.Users
 									  .FirstOrDefaultAsync(f => f.Id == request.Id, cancellationToken);
