@@ -6,7 +6,7 @@ using HireMeF.UseCases.UserCommands;
 using HireMeF.Data.Entities;
 
 [ApiController]
-[Route("api/v1")]
+[Route("[controller]")]
 public class UsersController : ControllerBase
 {
 	private readonly IMediator _mediator;
@@ -28,4 +28,11 @@ public class UsersController : ControllerBase
 
 		return await _mediator.Send(new GetUserByIdQuery(id));
 	}
+
+	[HttpGet("list")]
+	public async Task<List<User>> GetUsersList()
+	{
+		return await _mediator.Send(new GetNotPaginatedUsersListQuery());
+	}
 }
+

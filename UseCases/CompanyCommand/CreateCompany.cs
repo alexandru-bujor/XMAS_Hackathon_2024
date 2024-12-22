@@ -41,6 +41,7 @@ namespace HireMeF.UseCases.CompanyCommands
 			var companyToAdd = new Company
 			{
 				Id = Guid.NewGuid(),
+				Name = request.Name,
 				Type = request.Type,
 				IsActive = request.IsActive,
 				CreationDate = request.CreationDate,
