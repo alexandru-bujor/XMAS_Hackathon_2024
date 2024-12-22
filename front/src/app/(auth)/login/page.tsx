@@ -18,7 +18,8 @@ export default function Login() {
           Log In
         </h1>
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-          <div>
+          <img className={"p-2 py-6"} src={"https://www.asp.gov.md/sites/default/files/dd/logo-mpower.svg"}/>
+          {/* <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
               Email Address
             </label>
@@ -39,7 +40,7 @@ export default function Login() {
                 className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your password"
             />
-          </div>
+          </div> */}
           <button
               type="submit"
               className="bg-black text-gray-200 hover:bg-[#00B99A] font-semibold rounded-full w-full py-3 transition-all duration-300"
@@ -57,7 +58,6 @@ export default function Login() {
 
         </div>
 
-        <img className={"p-2 py-6"} src={"https://www.asp.gov.md/sites/default/files/dd/logo-mpower.svg"}/>
 
       </div>
     </div>

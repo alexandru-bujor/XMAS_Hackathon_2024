@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import SidebarItem from "./components/SidebarItem";
+import { PiIdentificationBadgeLight } from "react-icons/pi";
 import { PiBuildingApartmentLight } from "react-icons/pi";
 import { PiInfoLight } from "react-icons/pi";
 import { SiRobotframework } from "react-icons/si";
@@ -103,11 +104,11 @@ const menuGroups = [
       {
         icon: (
 
-            <PiInfoLight className={"fill-current"} size={24}/>
+            <PiIdentificationBadgeLight className={"fill-current"} size={24}/>
 
         ),
-        label: "Help",
-        route: "/srm/help",
+        label: "Workers",
+        route: "/srm/workers",
       },
 
       // GRANN DIAGRAM
