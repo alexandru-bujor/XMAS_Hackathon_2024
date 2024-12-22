@@ -10,7 +10,7 @@ namespace HireMeF.UseCases.CompanyCommands
 	{
 		public Guid Id;
 		public string Name { get; set; }
-		public string Type { get; set; }
+		public CompanyType Type { get; set; } // Changed to use CompanyType enum
 		public bool IsActive { get; set; }
 		public DateTime CreationDate { get; set; }
 		public string Address { get; set; }
@@ -42,7 +42,7 @@ namespace HireMeF.UseCases.CompanyCommands
 			{
 				Id = Guid.NewGuid(),
 				Name = request.Name,
-				Type = request.Type,
+				Type = request.Type, // Correctly assign enum type
 				IsActive = request.IsActive,
 				CreationDate = request.CreationDate,
 				Address = request.Address,

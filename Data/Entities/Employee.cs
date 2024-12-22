@@ -12,5 +12,7 @@
 		public string JobTitle { get; set; } = string.Empty;
 		public string Department { get; set; } = string.Empty;
 		public int Holidays { get; set; }
+		/*public Company Company { get; set; }
+		public Guid CompanyId { get; set; }*/
 	}
 }
