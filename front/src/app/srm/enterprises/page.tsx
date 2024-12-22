@@ -7,46 +7,59 @@ import Link from 'next/link';
 import Header from "@/components/ui/Header";
 
 const companyDropDownTypes = [
-	{
-		name:"SRL",
-		index: 1,
-	},
-	{
-		name:"II",
-		index: 2,
-	},
-	{
-		name:"IF",
-		index: 3,
-	},
-	{
-		name:"SA",
-		index: 4,
-	},
-	{
-		name:"Rezidenti IT",
-		index: 5,
-	},
-	
+    {
+        name:"SRL",
+        index: 1,
+    },
+    {
+        name:"II",
+        index: 2,
+    },
+    {
+        name:"IF",
+        index: 3,
+    },
+    {
+        name:"SA",
+        index: 4,
+    },
+    {
+        name:"Rezidenti IT",
+        index: 5,
+    },
 ]
-
 
 export default function Page() {
     const [enterpriseList, setEnterpriseList] = useState<any>([]);
     const [formOn, setFormOn] = useState<boolean>(false);
     const formRef = useRef<HTMLDivElement>(null);
-		const [selectedCompanyType, setSelectedCompanyType] = useState<string>("");
+    const [selectedCompanyType, setSelectedCompanyType] = useState<string>("");
+    const [formData, setFormData] = useState({
+        name: "",
+        type: "",
+        founder: "",
+        date: "",
+        address: "",
+    });
 
-		const handleCompanyTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-			setSelectedCompanyType(e.target.value);
-	};
+    const handleCompanyTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCompanyType(e.target.value);
+        setFormData(prev => ({ ...prev, type: e.target.value }));
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [id]: value
+        }));
+    };
 
     const handleOnClick = () => {
         setFormOn(true);
     };
 
     const handleClickOutside = (e: React.MouseEvent) => {
-        // Only close if clicking the overlay and not the form
         if (formRef.current && !formRef.current.contains(e.target as Node)) {
             setFormOn(false);
         }
@@ -54,10 +67,31 @@ export default function Page() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        //should send on backend and append to the database business
+        
+        // Create new company object
+        const newCompany = {
+            name: `${formData.type} ${formData.name}`,
+            idno: Math.floor(Math.random() * 1000000000000).toString(), // Generate random ID for demo
+            Date: formData.date,
+            Adress: formData.address // Note: keeping original spelling from dummy data
+        };
+
+        // Add to existing list
+        setEnterpriseList(prev => [...prev, newCompany]);
+        
+        // Reset form
+        setFormData({
+            name: "",
+            type: "",
+            founder: "",
+            date: "",
+            address: "",
+        });
+        setSelectedCompanyType("");
+        setFormOn(false);
     };
 
-    const dummyDataList: any = [{
+    let dummyDataList: any = [{
         "name": "SRL Tucano Coffee",
         "idno": "101010101010102",
         "Date": "31.01.2014",
@@ -96,15 +130,14 @@ export default function Page() {
     };
 
     return (
-			<>
+        <>
             <div className="flex flex-row flex-wrap gap-6 p-6">
-							{/* <Header label={"Project"} customClassname="-mx-6 px-5"/> */}
                 {enterprises.map((enterprise, index:number) => (
                     <Link
                         key={enterprise.idno}
                         href={`/${enterprise.idno}`}
                         passHref
-                        className="flex-none h-48" // Fixed height and no flex grow
+                        className="flex-none h-48"
                     >
                         <div
                             className={`w-80 h-full rounded-lg border border-zinc-100 bg-gradient-to-r ${getGradient(index)} p-6 shadow-md hover:shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105`}
@@ -125,7 +158,7 @@ export default function Page() {
                                     {enterprise.Date}
                                 </p>
                                 <p className="text-base font-medium">
-                                    <span className="font-semibold text-zinc-700">Address: </span>
+                                    <span className="font-semibold text-zinc-700">Juridical Address: </span>
                                     {enterprise.Adress}
                                 </p>
                             </div>
@@ -148,12 +181,10 @@ export default function Page() {
 
             {formOn && (
                 <>
-                    {/* Overlay */}
                     <div 
                         className="fixed inset-0 bg-black bg-opacity-50 z-20 flex items-center justify-center"
                         onClick={handleClickOutside}
                     >
-                        {/* Form Container */}
                         <div 
                             ref={formRef}
                             className="bg-white rounded-lg p-6 shadow-lg w-[400px] z-30"
@@ -161,18 +192,20 @@ export default function Page() {
                         >
                             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                                 <div>
-                                    <label htmlFor="company" className="block text-sm font-medium mb-2">
-                                      Company name
+                                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                                        Company name
                                     </label>
                                     <input
-                                        type="company"
-                                        id="company"
+                                        type="text"
+                                        id="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
                                         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         placeholder="Enter your company"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="password" className="block text-sm font-medium mb-2">
+                                    <label htmlFor="companyType" className="block text-sm font-medium mb-2">
                                         Company Type
                                     </label>
                                     <select
@@ -189,44 +222,50 @@ export default function Page() {
                                         ))}
                                     </select>
                                 </div>
-																<div>
+                                <div>
                                     <label htmlFor="founder" className="block text-sm font-medium mb-2">
                                         Founder's name
                                     </label>
                                     <input
-                                        type="founder"
+                                        type="text"
                                         id="founder"
+                                        value={formData.founder}
+                                        onChange={handleInputChange}
                                         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="Enter your founder"
+                                        placeholder="Enter founder's name"
                                     />
                                 </div>
-																<div>
-                                    <label htmlFor="dateof" className="block text-sm font-medium mb-2">
+                                <div>
+                                    <label htmlFor="date" className="block text-sm font-medium mb-2">
                                         Date of Registration
                                     </label>
                                     <input
-                                        type="dateof"
-                                        id="dateof"
+                                        type="text"
+                                        id="date"
+                                        value={formData.date}
+                                        onChange={handleInputChange}
                                         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="Enter your dateof"
+                                        placeholder="DD.MM.YYYY"
                                     />
                                 </div>
-																<div>
-                                    <label htmlFor="adress" className="block text-sm font-medium mb-2">
-                                        Adress
+                                <div>
+                                    <label htmlFor="address" className="block text-sm font-medium mb-2">
+                                        Address
                                     </label>
                                     <input
-                                        type="adress"
-                                        id="adress"
+                                        type="text"
+                                        id="address"
+                                        value={formData.address}
+                                        onChange={handleInputChange}
                                         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="Enter your adress"
+                                        placeholder="Enter address"
                                     />
                                 </div>
                                 <button
                                     type="submit"
                                     className="bg-black text-gray-200 hover:bg-[#00B99A] font-semibold rounded-full w-full py-3 transition-all duration-300"
                                 >
-                                    Get PDF
+                                    Add Company
                                 </button>
                             </form>
                         </div>

@@ -204,9 +204,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             className="flex items-center hover:bg-gray-100 rounded-lg p-2 transition-colors duration-200"
           >
             <Image 
-              src="/logo.svg" 
-              width={16} 
-              height={16} 
+              src="/user.png" 
+              width={100} 
+              height={100} 
               className="w-5 h-5" 
               alt="userIcon"
             />
