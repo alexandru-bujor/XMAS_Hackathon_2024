@@ -6,7 +6,7 @@ using HireMeF.UseCases.UserCommands;
 using HireMeF.Data.Entities;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/v1")]
 public class UsersController : ControllerBase
 {
 	private readonly IMediator _mediator;
@@ -16,7 +16,7 @@ public class UsersController : ControllerBase
 		_mediator = mediator;
 	}
 
-	[HttpPost("create")]
+	[HttpPost("create-user")]
 	public async Task<Guid> CreateUserCommand([FromBody] User request)
 	{
 		return await _mediator.Send(new CreateUserCommand(request));

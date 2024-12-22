@@ -1,3 +1,5 @@
+using System;
+
 namespace HireMeF.Data.Entities
 {
 	public class Company
@@ -6,7 +8,7 @@ namespace HireMeF.Data.Entities
 		public string Name { get; set; }
 		public string Type { get; set; }
 		public bool IsActive { get; set; }
-		public DataTime CreationDate { get; set; }
+		public DateTime CreationDate { get; set; }
 		public string Address { get; set; }
         public double Turnover { get; set; }
 	}

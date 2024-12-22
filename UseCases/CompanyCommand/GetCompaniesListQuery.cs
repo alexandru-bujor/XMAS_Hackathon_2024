@@ -33,7 +33,7 @@ namespace HireMeF.UseCases.CompanyCommands
 					IsActive = c.IsActive,
 					CreationDate = c.CreationDate,
                     Address = c.Address,
-                    Turnover = c.Turnvoer
+                    Turnover = c.Turnover
 				}).ToListAsync(cancellationToken);
 
 			return companies;
