@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from "axios";
 
 const api: AxiosInstance = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "https://localhost:7166",
 });
 
 // Request interceptor

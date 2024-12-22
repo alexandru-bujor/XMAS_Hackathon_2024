@@ -1,9 +1,22 @@
 'use client'
 
-import { useState } from 'react';
+import ButtonDefault from '@/components/ui/ButtonDefault';
+import api from '@/lib/axiosApi';
+import { useEffect, useState } from 'react';
+
+interface Employee {
+  name: string;
+  jobTitle: string;
+  department: string;
+  company: string;
+  salary: number;
+  holidays: string;
+  pfp: string;
+  id: string;
+}
 
 const TableThree = () => {
-  const [packageData, setPackageData] = useState([
+  const [packageData, setPackageData] = useState<Employee[]>([
     {
       name: "John Week",
       jobTitle: "cleaner",
@@ -46,10 +59,48 @@ const TableThree = () => {
     },
   ]);
 
-  const handleClickDelete = (id) => {
-    console.log("Deleted item with ID:", id);
+  const handleClickDelete = (id:string) => {
+    // console.log("Deleted item with ID:", id);
     setPackageData(packageData.filter((item) => item.id !== id));
   };
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const handleCalculate = () =>{
+
+  }
+
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        setIsLoading(true);
+        const employees = await api.get<Employee[]>('/create-employee');
+        setPackageData(employees);
+      } catch (error: any) {
+        console.error("Error fetching employees:", error.message);
+        setError(error.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchEmployees();
+  }, []);
+
+  if (error) {
+    return (
+      <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3">
+        <p className="text-red-500">Error loading employees: {error}</p>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3">
+        <p className="text-gray-500">Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="rounded-[10px] border border-stroke bg-white p-4 shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card sm:p-7.5">
@@ -135,6 +186,9 @@ const TableThree = () => {
             ))}
           </tbody>
         </table>
+        <button onClick={handleCalculate} className=' m-2 w-fit bg-gray-300 hover:bg-green-500'>
+          Calculate
+        </button>
       </div>
     </div>
   );

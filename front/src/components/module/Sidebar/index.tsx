@@ -7,7 +7,7 @@ import Image from "next/image";
 import SidebarItem from "./components/SidebarItem";
 import { PiIdentificationBadgeLight } from "react-icons/pi";
 import { PiBuildingApartmentLight } from "react-icons/pi";
-import { PiInfoLight } from "react-icons/pi";
+import { PiInfoLight, PiFile } from "react-icons/pi";
 import { SiRobotframework } from "react-icons/si";
 import { PiCalendarDotsLight } from "react-icons/pi";
 
@@ -111,6 +111,16 @@ const menuGroups = [
         route: "/srm/workers",
       },
 
+      {
+        icon: (
+
+            <PiFile className={"fill-current"} size={24}/>
+
+        ),
+        label: "Documents",
+        route: "/srm/documents",
+      },
+      
       // GRANN DIAGRAM
       {
         icon: (
