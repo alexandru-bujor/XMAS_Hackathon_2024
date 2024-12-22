@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      {/*<div>IMG</div>*/}
         <div className={"flex"}>
 
           <Sidebar sidebarOpen = {sidebarOpen} setSidebarOpen={setSidebarOpen}/>

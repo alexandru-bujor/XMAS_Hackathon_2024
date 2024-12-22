@@ -1,11 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
+import { GiFamilyTree } from "react-icons/gi";
 
 export default function Home() {
-  return (
-    <>
-      <Link href="/login"></Link>
-      <Link href="/registration"></Link>
-    </>  
-  );
+    return (
+        <>
+            <div className={"flex justify-items-center items-center "}>
+                <GiFamilyTree size={300}/>
+
+            </div>
+        </>
+    );
 }
