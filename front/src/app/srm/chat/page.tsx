@@ -35,7 +35,7 @@ const ChatInterface = () => {
     setInputMessage('');
 
     try {
-      const response = await fetch("http://localhost:5009/", {
+      const response = await fetch("http://localhost:5009/api/ask", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
