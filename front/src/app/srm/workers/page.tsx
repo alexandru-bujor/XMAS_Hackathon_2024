@@ -3,27 +3,39 @@
 const packageData: any = [
   {
     name: "John Week",
-    price: 0.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
+    jobTitle: "cleaner",
+    department: "department",
+    company: "Moldtelecom",
+    salary: 5000.0,
+    holidays: `20`,
+    pfp: "pfp",
   },
   {
     name: "Amanda Kramer",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
+    jobTitle: "cleaner",
+    department: "department",
+    company: "Moldtelecom",
+    salary: 5000.0,
+    holidays: `20`,
+    pfp: "pfp",
   },
   {
     name: "Frank Dinatra",
-    price: 99.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Unpaid",
+    jobTitle: "cleaner",
+    department: "department",
+    company: "Moldtelecom",
+    salary: 5000.0,
+    holidays: `20`,
+    pfp: "pfp",
   },
   {
     name: "Sulen Yana",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Pending",
+    jobTitle: "cleaner",
+    department: "department",
+    company: "Moldtelecom",
+    salary: 5000.0,
+    holidays: `20`,
+    pfp: "pfp",
   },
 ];
 
@@ -38,10 +50,22 @@ const TableThree = () => {
                 Package
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-dark dark:text-white">
-                Invoice date
+                Job Title
               </th>
               <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
-                Status
+                Department
+              </th>
+              <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
+                Company
+              </th>
+              <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
+                Salary
+              </th>
+              <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
+                Holidays
+              </th>
+              <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
+                PF Picture
               </th>
               <th className="px-4 py-4 text-right font-medium text-dark dark:text-white xl:pr-7.5">
                 Actions
@@ -57,30 +81,49 @@ const TableThree = () => {
                   <h5 className="text-dark dark:text-white">
                     {packageItem.name}
                   </h5>
-                  <p className="mt-[3px] text-body-sm font-medium">
-                    ${packageItem.price}
-                  </p>
                 </td>
                 <td
-                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
-                  <p className="text-dark dark:text-white">
-                    {packageItem.invoiceDate}
-                  </p>
+                  <h5 className="text-dark dark:text-white">
+                    {packageItem.jobTitle}
+                  </h5>
+                </td>
+                <td
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                >
+                  <h5 className="text-dark dark:text-white">
+                    {packageItem.department}
+                  </h5>
+                </td>
+                <td
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                >
+                  <h5 className="text-dark dark:text-white">
+                    {packageItem.company}
+                  </h5>
+                </td>
+                <td
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                >
+                  <h5 className="text-dark dark:text-white">
+                    {packageItem.salary}
+                  </h5>
+                </td>
+                <td
+                  className={`border-[#eee] px-4 py-4 dark:border-dark-3 xl:pl-7.5 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
+                >
+                  <h5 className="text-dark dark:text-white">
+                    {packageItem.holidays}
+                  </h5>
                 </td>
                 <td
                   className={`border-[#eee] px-4 py-4 dark:border-dark-3 ${index === packageData.length - 1 ? "border-b-0" : "border-b"}`}
                 >
                   <p
-                    className={`inline-flex rounded-full px-3.5 py-1 text-body-sm font-medium ${
-                      packageItem.status === "Paid"
-                        ? "bg-[#219653]/[0.08] text-[#219653]"
-                        : packageItem.status === "Unpaid"
-                          ? "bg-[#D34053]/[0.08] text-[#D34053]"
-                          : "bg-[#FFA70B]/[0.08] text-[#FFA70B]"
-                    }`}
+                    className="text-dark dark:text-white"
                   >
-                    {packageItem.status}
+                    {packageItem.pfp}
                   </p>
                 </td>
                 <td
