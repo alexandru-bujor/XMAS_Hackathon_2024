@@ -7,7 +7,7 @@ import Image from "next/image";
 import SidebarItem from "./components/SidebarItem";
 import { PiIdentificationBadgeLight } from "react-icons/pi";
 import { PiBuildingApartmentLight } from "react-icons/pi";
-import { PiInfoLight, PiFile } from "react-icons/pi";
+import { PiInfoLight, PiFile, PiChat } from "react-icons/pi";
 import { SiRobotframework } from "react-icons/si";
 import { PiCalendarDotsLight } from "react-icons/pi";
 
@@ -129,6 +129,14 @@ const menuGroups = [
         ),
         label: "Grann tasks",
         route: "/srm/grann",
+      },
+      {
+        icon: (
+            <PiChat  className={"fill-current"} size={24}/>
+
+        ),
+        label: "Chat",
+        route: "/srm/chat",
       },
       {
         icon: (
